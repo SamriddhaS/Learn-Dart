@@ -7,8 +7,13 @@ void main() {
 void testFunction() {
   var name = {'owl', 'fowl', 'houl', 'cowl', 'lowl'};
   name.add('owl');
+  final myName = "sam";
   for (var item in name) {
-    print(item);
+    if (item == myName) {
+      print("Your Name is found");
+    } else {
+      print("Your Name is not found in the above variable");
+    }
   }
 }
 
@@ -20,20 +25,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     testFunction();
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sam Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter demo app'),
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.cyan),
+      home: const MyHomePage(title: 'Samriddha Samanta'),
     );
   }
 }
@@ -83,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        backgroundColor: Colors.yellowAccent,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

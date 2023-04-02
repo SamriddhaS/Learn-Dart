@@ -17,13 +17,33 @@ void funIfElseStatements() {
   }
 }
 
+void operatorsInDart() {
+  // Infix operators are *, +, -,/ etc.
+  final age = 54;
+  var multiplyAge = age * 2;
+  var devideAge = age / 2;
+  var agePlusTen = age + 10;
+  print('Original age is:$age');
+  print('Original age*2 is:$multiplyAge');
+  print('Original age/2 is:$devideAge');
+  print('Original age+10 is:$agePlusTen');
+
+  //Prefix & postfix operators : -- ++
+  var number = 99;
+  print('Number -- is :${--number}');
+  print('Number ++ is :${++number},${number++}');
+  print('Number is :${number--}');
+  print('Number is :${number}');
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    testFunction();
+    //testFunction();
+    operatorsInDart();
     return MaterialApp(
       title: 'Sam Demo',
       theme: ThemeData(

@@ -4,7 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
-void testFunction() {
+void funIfElseStatements() {
   var name = {'owl', 'fowl', 'houl', 'cowl', 'lowl'};
   name.add('owl');
   final myName = "sam";

@@ -5,7 +5,7 @@ void main() {
 }
 
 void funIfElseStatements() {
-  var name = {'owl', 'fowl', 'houl', 'cowl', 'lowl'};
+  var name = ['owl', 'fowl', 'houl', 'cowl', 'lowl'];
   name.add('owl');
   final myName = "sam";
   for (var item in name) {
@@ -43,6 +43,26 @@ void listsInDart() {
   }
 }
 
+void setInDart() {
+  var name = {'owl', 'fowl', 'houl', 'cowl', 'lowl'};
+  name.add('owl');
+  name.forEach((element) {
+    print(element);
+  });
+  // We will see that the 'owl' element will be prited only once
+  // because set doesn't allow us to save two same elements inside it.
+}
+
+void mapsInDart() {
+  var myMap = {'key_1': 1223};
+  myMap['key_2'] = 0021;
+  myMap['key_3'] = 02144;
+  myMap['key_4'] = 1908;
+  for (var key in myMap.keys) {
+    print('Key Name : $key value : ${myMap[key]}');
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -51,7 +71,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //testFunction();
     //operatorsInDart();
-    listsInDart();
+    //listsInDart();
+    //setInDart();
+    mapsInDart();
     return MaterialApp(
       title: 'Sam Demo',
       theme: ThemeData(

@@ -36,6 +36,13 @@ void operatorsInDart() {
   print('Number is :${number}');
 }
 
+void listsInDart() {
+  final listOfNumbers = [1, 2, 3, 4, 5, 6];
+  for (var itr = 0; itr < listOfNumbers.length; itr++) {
+    print('Index : $itr | Item in the index is : ${listOfNumbers[itr]}');
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -43,7 +50,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //testFunction();
-    operatorsInDart();
+    //operatorsInDart();
+    listsInDart();
     return MaterialApp(
       title: 'Sam Demo',
       theme: ThemeData(

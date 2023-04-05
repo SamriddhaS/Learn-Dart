@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
     var myObject = Experiments();
     myObject.nullSefetyInDart(null, null);
     print(myObject.myList?.length ?? 'size is 0');
+    myObject.callEnums(MyProperties.LAST_NAME);
+
     return MaterialApp(
       title: 'Sam Demo',
       theme: ThemeData(

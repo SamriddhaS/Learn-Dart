@@ -76,5 +76,28 @@ class Experiments {
     print(firstName ??= 'new value assigned');
   }
 
+  void callEnums(MyProperties value) {
+    //this is how we call an emun in dart
+    print(MyProperties.values);
+    switch (value) {
+      case MyProperties.FIRST_NAME:
+        print('My first name is Sam');
+        break;
+      case MyProperties.LAST_NAME:
+        print('My last name is samanta');
+        break;
+      case MyProperties.AGE:
+        print('Age is unknown');
+        break;
+      case MyProperties.SEX:
+        print('Sex is male');
+        break;
+    }
+    
+  }
+
   List<String>? myList = null;
 }
+
+// This is how we declear a enum in dart.
+enum MyProperties { FIRST_NAME, LAST_NAME, AGE, SEX }

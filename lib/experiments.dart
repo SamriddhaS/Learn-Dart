@@ -93,7 +93,6 @@ class Experiments {
         print('Sex is male');
         break;
     }
-    
   }
 
   List<String>? myList = null;
@@ -101,3 +100,37 @@ class Experiments {
 
 // This is how we declear a enum in dart.
 enum MyProperties { FIRST_NAME, LAST_NAME, AGE, SEX }
+
+class Car {
+  String make;
+  String model;
+  String yearMade;
+  bool hasABS;
+  //Normal constructor in dart.
+  Car(this.make, this.model, this.yearMade, this.hasABS);
+}
+
+// In Dart, this is not possible, but there is a way around it.
+// It is called named constructors. Giving your constructors different names allows your class
+// to have many constructors and also to better represent their use cases outside of the class.
+// The constructor withoutABS initializes the instance variable hasABS to false, before the constructor body executes.
+// This is known as an initializer list and you can initialize several variables, separated by a comma.
+class Car1 {
+  String make;
+  String model;
+  String yearMade;
+  bool hasABS;
+
+  Car1(this.make, this.model, this.yearMade, this.hasABS);
+
+  Car1.withoutABS(this.make, this.model, this.yearMade) : hasABS = false;
+
+// this is a factory constractor 
+// A factory constructor is a constructor that can 
+// be used when you don't necessarily want a constructor to create a new instance of your class.
+// This might be useful if you hold instances of your class in memory and don't want to create a new one each time 
+// (or if the operation of creating an instance is costly). 
+  factory Car1.makeSomethingSpecific() {
+    return Car1('make','model 1','2023',false);
+  }
+}

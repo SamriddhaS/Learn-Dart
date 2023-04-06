@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_dart/AsyncWait.dart';
 import 'package:learn_dart/exp_2.dart';
 import 'package:learn_dart/experiments.dart';
 
@@ -17,10 +18,12 @@ class MyApp extends StatelessWidget {
     // print(myObject.myList?.length ?? 'size is 0');
     // myObject.callEnums(MyProperties.LAST_NAME);
 
-    var obj = Animal.namedConsSetDog();
-    obj.printAnimalName();
-    print(obj.printAnimalNameAlongwithNumOfLeg());
-    print(obj.nameWithNumOfLegs);
+    // var obj = Animal.namedConsSetDog();
+    // obj.printAnimalName();
+    // print(obj.printAnimalNameAlongwithNumOfLeg());
+    // print(obj.nameWithNumOfLegs);
+
+    makeAsyncMultiplication(23, 3);
 
     return MaterialApp(
       title: 'Sam Demo',

@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
     // print(obj.printAnimalNameAlongwithNumOfLeg());
     // print(obj.nameWithNumOfLegs);
 
-    makeAsyncMultiplication(23, 3);
+    // makeAsyncMultiplication(23, 3);
+
+    collectStreamValueAsync();
 
     return MaterialApp(
       title: 'Sam Demo',

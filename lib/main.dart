@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_dart/exp_2.dart';
 import 'package:learn_dart/experiments.dart';
 
 void main() {
@@ -11,10 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var myObject = Experiments();
-    myObject.nullSefetyInDart(null, null);
-    print(myObject.myList?.length ?? 'size is 0');
-    myObject.callEnums(MyProperties.LAST_NAME);
+    // var myObject = Experiments();
+    // myObject.nullSefetyInDart(null, null);
+    // print(myObject.myList?.length ?? 'size is 0');
+    // myObject.callEnums(MyProperties.LAST_NAME);
+
+    var obj = Animal.namedConsSetDog();
+    obj.printAnimalName();
+    print(obj.printAnimalNameAlongwithNumOfLeg());
+    print(obj.nameWithNumOfLegs);
 
     return MaterialApp(
       title: 'Sam Demo',

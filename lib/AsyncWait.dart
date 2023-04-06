@@ -26,3 +26,20 @@ Stream<int> getRandomNumberStream() {
 int getRandomNumber() {
   return Random().nextInt(1000);
 }
+
+// Generators in dart
+// The synchronous generator returns an iterable object i.e. it returns the collection of values, or “elements”,
+// that can be accessed sequentially.
+// To implement synchronous generator function, mark the function body as sync*, and use yield statements to deliver value(s).
+Iterable<int> getItarableListOfInt() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+void collectGenerator() {
+  for (var item in getItarableListOfInt()) {
+    print(item);
+    if (item == 2) break;
+  }
+}

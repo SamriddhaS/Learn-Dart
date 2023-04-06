@@ -25,7 +25,9 @@ class MyApp extends StatelessWidget {
 
     // makeAsyncMultiplication(23, 3);
 
-    collectStreamValueAsync();
+    // collectStreamValueAsync();
+
+    collectGenerator();
 
     return MaterialApp(
       title: 'Sam Demo',
